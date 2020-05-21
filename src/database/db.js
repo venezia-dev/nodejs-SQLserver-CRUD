@@ -1,5 +1,6 @@
 const sql = require('mssql')
 
+// Config DB SQL SERVER 2012 LOCAL - Configuracion con SQL SERVER 2012 LOCAL
 const config = {
     database: '...',
     authentication: { type: 'default', options: { userName: '...', password: '...' } },

@@ -4,8 +4,8 @@ var rawdata = fs.readFileSync('src/query/queries.json');
 var queries = JSON.parse(rawdata);
 
 class MainController {
-
-  async getAllData(req, res) {
+  // Get all products - Obtener todos los productos
+  async getProducts(req, res) {
     try {
       const pool = await poolPromise
       const result = await pool.request()
@@ -17,6 +17,7 @@ class MainController {
       res.send(error.message)
     }
   }
+  // Add new producto - Agregar nuevo producto
   async addProduct(req, res) {
     try {
       if (req.body.brand != null && req.body.model != null) {
@@ -36,6 +37,7 @@ class MainController {
       res.send(error.message)
     }
   }
+  // Edit product - Editar producto
   async editProduct(req, res){
     const { id } = req.params;
     try {
@@ -54,6 +56,7 @@ class MainController {
       res.send(error.message)
     }
   }
+  // Update Product - actualizar Producto
   async updateProduct(req, res) {
     const { id } = req.params;
     try {
@@ -75,6 +78,7 @@ class MainController {
       res.send(error.message)
     }
   }
+  // Delete Product - Eliminar Producto
   async deleteProduct(req, res) {
     const { id } = req.params;
     try {

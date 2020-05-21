@@ -6,8 +6,8 @@ const router = Router();
 
 // Rutas
 
-// Home Recupera todos los productos
-router.get('/', controller.getAllData);
+// Home - Obtiene todos los productos
+router.get('/', controller.getProducts);
 
 // Agregar Producto
 router.post('/addProduct', controller.addProduct);
@@ -17,7 +17,6 @@ router.get('/delete/:id' , controller.deleteProduct);
 
 // Editar Producto
 router.get('/update/:id',controller.editProduct);
-
 router.post('/update/:id',controller.updateProduct);
 
 module.exports = router;

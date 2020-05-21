@@ -629,3 +629,5 @@
 ::1 - - [21/May/2020:04:26:16 +0000] "POST /update/8 HTTP/1.1" 302 46 "http://localhost:3000/update/8" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36"
 ::1 - - [21/May/2020:04:26:16 +0000] "GET / HTTP/1.1" 200 10931 "http://localhost:3000/update/8" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36"
 ::1 - - [21/May/2020:04:26:16 +0000] "GET /all.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36"
+::1 - - [21/May/2020:16:38:25 +0000] "GET / HTTP/1.1" 500 43 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36"
+::1 - - [21/May/2020:16:38:26 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36"
