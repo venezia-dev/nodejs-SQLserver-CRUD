@@ -1,0 +1,7 @@
+{
+    "getAllData" : "SELECT * FROM listProducts",
+    "addProduct" :"INSERT INTO listProducts (brand, model, category, price) VALUES (@brand,@model,@category,@price)",
+    "deleteProduct" : "DELETE FROM listProducts WHERE id = @id",
+    "getProduct" : "SELECT * FROM listProducts WHERE id = @id",
+    "updateProduct" : "UPDATE listProducts SET brand = @brand, model = @model, category = @category, price = @price WHERE id = @id"
+}

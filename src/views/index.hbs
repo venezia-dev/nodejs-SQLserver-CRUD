@@ -1,0 +1,139 @@
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-6">
+                            <h3 class="mt-2">Listado de Productos</h3>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addProduct">
+                                Nuevo Producto
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            Cantidad de Productos: {{products.length}}
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <div class="table-responsive-md">
+                                <table class="table">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">Marca</th>
+                                            <th scope="col">Modelo</th>
+                                            <th scope="col">Categoria</th>
+                                            <th scope="col">Precio</th>
+                                            <th scope="col">Adm</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {{#each products}}
+                                        <tr>
+                                            <th scope="row">{{id}}</th>
+                                            <td>{{brand}}</td>
+                                            <td>{{model}}</td>
+                                            <td>{{category}}</td>
+                                            <td>${{price}}</td>
+                                            <td><a class="btn btn-warning" href="/delete/{{id}}"><i class="fa fa-trash"></i></a>
+                                            <a class="btn btn-info" href="/update/{{id}}"><i class="fas fa-edit"></i></a>
+                                            </td>
+                                        </tr>
+                                       {{/each}}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="addProduct" tabindex="-1" role="dialog" aria-labelledby="addProduct" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addProduct">Agregar Producto</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="/addProduct" method="POST">
+                            <div class="form-group">
+                                <input type="text" name="brand" class="form-control" placeholder="Marca" autofocus>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="model" class="form-control" placeholder="Modelo">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="category" class="form-control" placeholder="Categoria">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="price" class="form-control" placeholder="Precio">
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-success btn-block">
+                                    Agregar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="addProduct" tabindex="-1" role="dialog" aria-labelledby="addProduct" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addProduct">Agregar Producto</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="/update/{{id}}" method="POST">
+                            <div class="form-group">
+                                <input type="text" name="brand" class="form-control" placeholder="Marca" autofocus>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="model" class="form-control" placeholder="Modelo">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="category" class="form-control" placeholder="Categoria">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="price" class="form-control" placeholder="Precio">
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-success btn-block">
+                                    Agregar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
