@@ -11,7 +11,7 @@ Run: npm run dev
 (ES)
 Ejemplo CRUD con NODEJS, SQL SERVER 2012
 
-Configurar la informacion de tu conecion con SQL SERVER en "database/db.js"
+Configurar la informacion de tu conexión con SQL SERVER en "database/db.js"
 
 Despues ejecutar con: npm run dev
 
